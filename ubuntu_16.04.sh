@@ -22,6 +22,7 @@ apt-get install -y php-fpm \
     php-intl \
     php-mysql \
     php-dom \
+    php-bz2 \
 
 service php7.0-fpm restart
 
