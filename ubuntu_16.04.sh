@@ -21,6 +21,7 @@ apt-get install -y php-fpm \
     php-opcache \
     php-intl \
     php-mysql \
+    php-dom \
 
 service php7.0-fpm restart
 
