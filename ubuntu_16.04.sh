@@ -6,6 +6,7 @@ apt-get install -y \
     htop \
     curl \
     git \
+    python \
 
 
 # nginx
