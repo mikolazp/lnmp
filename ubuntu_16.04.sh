@@ -24,6 +24,7 @@ apt-get install -y php-fpm \
     php-mysql \
     php-dom \
     php-bz2 \
+    php-geoip \
 
 service php7.0-fpm restart
 
