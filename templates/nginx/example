@@ -8,7 +8,7 @@ server {
     charset utf-8;
 
     # disallow all started from . or _protected
-    location ~ "/(\.|\_protected)" {
+    location ~ "/(\.|\_protected|composer.json|composer.lock)" {
          deny all;
     }
 
