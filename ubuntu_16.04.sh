@@ -31,13 +31,14 @@ service php7.0-fpm restart
 #mysql
 apt-get install -y mysql-server
 
-# percona server
+## percona server
 #wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb
 #dpkg -i percona-release_0.1-4.$(lsb_release -sc)_all.deb
 #apt-get update
-#apt-get install percona-server-server-5.7 percona-server-tokudb-5.7
-
-
+#apt-get install -y percona-server-server-5.7 percona-server-tokudb-5.7
+#
+## enable tokudb
+#ps_tokudb_admin --enable -uroot -p
 
 
 
