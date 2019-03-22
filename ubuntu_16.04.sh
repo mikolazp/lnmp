@@ -16,7 +16,7 @@ apt-get install -y nginx
 PHP_VER="7.1"
 
 apt-get install software-properties-common
-add-apt-repository ppa:ondrej/php
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 apt-get update
 
 apt-get install -y php$PHP_VER-fpm \
