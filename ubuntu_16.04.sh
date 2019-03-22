@@ -13,31 +13,39 @@ apt-get install -y \
 apt-get install -y nginx
 
 #php-fpm
-apt-get install -y php-fpm \
-    php-curl \
-    php-zip \
-    php-gd \
-    php-mbstring \
-    php-mcrypt \
-    php-opcache \
-    php-intl \
-    php-mysql \
-    php-dom \
-    php-bz2 \
-    php-geoip \
+PHP_VER="7.1"
 
-service php7.0-fpm restart
+apt-get install software-properties-common
+add-apt-repository ppa:ondrej/php
+apt-get update
+
+apt-get install -y php$PHP_VER-fpm \
+    php$PHP_VER-curl \
+    php$PHP_VER-zip \
+    php$PHP_VER-gd \
+    php$PHP_VER-mbstring \
+    php$PHP_VER-mcrypt \
+    php$PHP_VER-opcache \
+    php$PHP_VER-intl \
+    php$PHP_VER-mysql \
+    php$PHP_VER-dom \
+    php$PHP_VER-bz2 \
+    php$PHP_VER-geoip \
+
+service php$PHP_VER-fpm restart
 
 #mysql
-apt-get install -y mysql-server
+#apt-get install -y mysql-server
 
 ## percona server
-#wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb
-#dpkg -i percona-release_0.1-4.$(lsb_release -sc)_all.deb
+#wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
+#dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
 #apt-get update
-#apt-get install -y percona-server-server-5.7 percona-server-tokudb-5.7
-#
+#apt-get install -y percona-server-server-5.7
+
+
 ## enable tokudb
+#apt-get install -y percona-server-tokudb-5.7
 #ps_tokudb_admin --enable -uroot -p
 
 
